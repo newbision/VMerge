@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Merge Video View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MergeVideoViewController" id="BYZ-38-t0r" customClass="MergeVideoViewController" customModule="VMerge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR5-DX-XJA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="467"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-XA-Dsg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-z2-Ogv">
+                                        <rect key="frame" x="0.0" y="233.5" width="375" height="233.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lFF-z2-Ogv" secondAttribute="bottom" id="MIL-i6-daC"/>
+                                    <constraint firstItem="5Tv-XA-Dsg" firstAttribute="top" secondItem="sR5-DX-XJA" secondAttribute="top" id="VVX-Ch-jxO"/>
+                                    <constraint firstItem="lFF-z2-Ogv" firstAttribute="height" secondItem="5Tv-XA-Dsg" secondAttribute="height" id="WAT-Qd-cHx"/>
+                                    <constraint firstItem="lFF-z2-Ogv" firstAttribute="leading" secondItem="sR5-DX-XJA" secondAttribute="leading" id="cd3-9i-hfU"/>
+                                    <constraint firstItem="5Tv-XA-Dsg" firstAttribute="leading" secondItem="sR5-DX-XJA" secondAttribute="leading" id="ldr-IH-gds"/>
+                                    <constraint firstItem="lFF-z2-Ogv" firstAttribute="top" secondItem="5Tv-XA-Dsg" secondAttribute="bottom" id="rMY-xg-P3Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="lFF-z2-Ogv" secondAttribute="trailing" id="xE6-sq-lRH"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Tv-XA-Dsg" secondAttribute="trailing" id="zl8-Rq-IF0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-Aa-eEc">
+                                <rect key="frame" x="0.0" y="487" width="375" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brz-CG-BR9">
+                                        <rect key="frame" x="161" y="75" width="56" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Merge"/>
+                                        <connections>
+                                            <action selector="mergeVideoButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QcW-eX-jag"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YbV-Aa-eEc" secondAttribute="bottom" id="34k-mP-M2H"/>
+                            <constraint firstItem="sR5-DX-XJA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K5p-ZD-3Yu"/>
+                            <constraint firstItem="YbV-Aa-eEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkV-s6-uS6"/>
+                            <constraint firstItem="sR5-DX-XJA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U8L-Io-bek"/>
+                            <constraint firstItem="YbV-Aa-eEc" firstAttribute="top" secondItem="sR5-DX-XJA" secondAttribute="bottom" id="afM-dy-oq0"/>
+                            <constraint firstItem="sR5-DX-XJA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="cNb-DM-acA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YbV-Aa-eEc" secondAttribute="trailing" id="eQF-rq-M6F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sR5-DX-XJA" secondAttribute="trailing" id="hwY-Sf-LGM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomVideoView" destination="lFF-z2-Ogv" id="9yh-yY-6q1"/>
+                        <outlet property="mergeVideoButton" destination="Brz-CG-BR9" id="LR0-BE-cbn"/>
+                        <outlet property="topVideoView" destination="5Tv-XA-Dsg" id="Gzl-ZC-AUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
