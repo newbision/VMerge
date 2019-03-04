@@ -2,8 +2,8 @@
 //  VideoMerger.swift
 //  VMerge
 //
-//  Created by Volasys on 8/22/18.
-//  Copyright © 2018 AK. All rights reserved.
+//  Created by Sb15utah on 8/22/18.
+//  Copyright © 2018. All rights reserved.
 //
 
 import Foundation
