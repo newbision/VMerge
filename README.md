@@ -9,16 +9,16 @@ It's a sample that can merge several video clips into one screen. Please take a 
 ----------
 
 ```
-	videoMerger.merge { [weak self] session in
-            
-        guard session.status == .completed, let outputURL = session.outputURL else { return }
+videoMerger.merge { [weak self] session in
 
-	    if PHPhotoLibrary.authorizationStatus() != .authorized {
-    	    PHPhotoLibrary.requestAuthorization({ status in
-        	    if status == .authorized {
-            	    self.saveToPhotoLibrary(url: outputURL)
-            	}
-        	})
-    	}
+    guard session.status == .completed, let outputURL = session.outputURL else { return }
+
+    if PHPhotoLibrary.authorizationStatus() != .authorized {
+	PHPhotoLibrary.requestAuthorization({ status in
+	    if status == .authorized {
+	        self.saveToPhotoLibrary(url: outputURL)
+	    }
+	})
     }
+}
 ```
