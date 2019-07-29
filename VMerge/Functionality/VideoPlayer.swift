@@ -2,7 +2,7 @@
 //  VideoPlayer.swift
 //  VMerge
 //
-//  Created by Volasys on 8/22/18.
+//  Created by newbision on 8/22/18.
 //  Copyright © 2018 AK. All rights reserved.
 //
 
@@ -36,7 +36,7 @@ final class VideoPlayer: NSObject {
         
         let playerController = AVPlayerViewController()
         playerController.player = player
-        viewController.addChildViewController(playerController)
+        viewController.addChild(playerController)
         
         playerController.view.translatesAutoresizingMaskIntoConstraints = false
         playerController.view.frame = view.frame

@@ -2,7 +2,7 @@
 //  VideoMerger.swift
 //  VMerge
 //
-//  Created by Volasys on 8/22/18.
+//  Created by newbision on 8/22/18.
 //  Copyright © 2018 AK. All rights reserved.
 //
 
@@ -86,9 +86,9 @@ final class VideoMerger {
 
         do {
             try firstTrack.insertTimeRange(
-                CMTimeRangeMake(kCMTimeZero, firstAsset.duration),
+                CMTimeRangeMake(start: CMTime.zero, duration: firstAsset.duration),
                 of: firstAsset.tracks(withMediaType: .video)[0],
-                at: kCMTimeZero
+                at: CMTime.zero
             )
         } catch {
             return
@@ -100,9 +100,9 @@ final class VideoMerger {
         
         do {
             try secondTrack.insertTimeRange(
-                CMTimeRangeMake(kCMTimeZero, secondAsset.duration),
+                CMTimeRangeMake(start: CMTime.zero, duration: secondAsset.duration),
                 of: secondAsset.tracks(withMediaType: .video)[0],
-                at: kCMTimeZero
+                at: CMTime.zero
             )
         } catch {
             return
@@ -110,8 +110,8 @@ final class VideoMerger {
         
         let mainInstruction = AVMutableVideoCompositionInstruction()
         mainInstruction.timeRange = CMTimeRangeMake(
-            kCMTimeZero,
-            max(firstAsset.duration, secondAsset.duration)
+            start: CMTime.zero,
+            duration: max(firstAsset.duration, secondAsset.duration)
         )
         
         let firstInstruction = videoCompositionInstruction(
@@ -131,7 +131,7 @@ final class VideoMerger {
         mainInstruction.layerInstructions = [firstInstruction, secondInstruction]
         let mainComposition = AVMutableVideoComposition()
         mainComposition.instructions = [mainInstruction]
-        mainComposition.frameDuration = CMTimeMake(1, 30)
+        mainComposition.frameDuration = CMTimeMake(value: 1, timescale: 30)
         mainComposition.renderSize = videoSize
         
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
@@ -159,8 +159,8 @@ final class VideoMerger {
     
     // MARK: - Helpers
     
-    func orientationFromTransform(_ transform: CGAffineTransform) -> (orientation: UIImageOrientation, isPortrait: Bool) {
-        var assetOrientation: UIImageOrientation = .up
+    func orientationFromTransform(_ transform: CGAffineTransform) -> (orientation: UIImage.Orientation, isPortrait: Bool) {
+        var assetOrientation: UIImage.Orientation = .up
         var isPortrait = false
         
         if transform.a == 0 && transform.b == 1.0 && transform.c == -1.0 && transform.d == 0 {
@@ -192,7 +192,7 @@ final class VideoMerger {
             scaleToFitRatio = preferredSize.width / assetTrack.naturalSize.height
 
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-            instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor), at: kCMTimeZero)
+            instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor), at: CMTime.zero)
         } else {
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
             var concat = assetTrack.preferredTransform.concatenating(scaleFactor)
@@ -215,7 +215,7 @@ final class VideoMerger {
                 concat = fixUpsideDown.concatenating(centerFix).concatenating(scaleFactor)
             }
 
-            instruction.setTransform(concat, at: kCMTimeZero)
+            instruction.setTransform(concat, at: CMTime.zero)
         }
         
         let isFirstVideo = asset == firstAsset
@@ -238,7 +238,7 @@ final class VideoMerger {
             }
         }
         
-        instruction.setTransform(concat, at: kCMTimeZero)
+        instruction.setTransform(concat, at: CMTime.zero)
         
         return instruction
     }

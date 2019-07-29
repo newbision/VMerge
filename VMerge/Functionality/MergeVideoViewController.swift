@@ -2,7 +2,7 @@
 //  MergeVideoViewController.swift
 //  VMerge
 //
-//  Created by Volasys on 8/22/18.
+//  Created by newbision on 8/22/18.
 //  Copyright © 2018 AK. All rights reserved.
 //
 
@@ -102,7 +102,7 @@ final class MergeVideoViewController: UIViewController {
             let message = success ? "Video saved" : "Failed to save video"
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
