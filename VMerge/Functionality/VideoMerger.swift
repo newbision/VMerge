@@ -2,8 +2,8 @@
 //  VideoMerger.swift
 //  VMerge
 //
-//  Created by newbision on 8/22/18.
-//  Copyright © 2018 newbision. All rights reserved.
+//  Created by Sb15utah on 8/22/18.
+//  Copyright © 2018. All rights reserved.
 //
 
 import Foundation
