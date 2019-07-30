@@ -23,6 +23,6 @@ videoMerger.merge { [weak self] session in
 }
 ```
 
-![screenshot](https://raw.githubusercontent.com/newbision/VMerge/f616870ffb5dbe7917aa52745371b7fbf3255b13/1.png?raw=true)
+![screenshot](https://raw.githubusercontent.com/newbision/VMerge/master/screenshot/1.png?raw=true)
 
-![screenshot](https://raw.githubusercontent.com/newbision/VMerge/master/2.png?raw=true)
+![screenshot](https://raw.githubusercontent.com/newbision/VMerge/master/screenshot/2.png?raw=true)
