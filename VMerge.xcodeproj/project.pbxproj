@@ -16,9 +16,12 @@
 		8E41F32D212D6A9300880F43 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E41F32B212D6A9200880F43 /* video2.mp4 */; };
 		8E41F332212D6CE100880F43 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41F331212D6CE100880F43 /* VideoPlayer.swift */; };
 		8E41F335212D77DB00880F43 /* VideoMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41F334212D77DB00880F43 /* VideoMerger.swift */; };
+		D4586E4F5741ACEEEBC9A770 /* Pods_VMerge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D535FB55D9CA67217F8C33 /* Pods_VMerge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19D535FB55D9CA67217F8C33 /* Pods_VMerge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMerge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50616246C43A4D9B7BBA25D7 /* Pods-VMerge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMerge.debug.xcconfig"; path = "Target Support Files/Pods-VMerge/Pods-VMerge.debug.xcconfig"; sourceTree = "<group>"; };
 		8E41F313212D697A00880F43 /* VMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E41F316212D697A00880F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E41F318212D697A00880F43 /* MergeVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeVideoViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		8E41F32B212D6A9200880F43 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
 		8E41F331212D6CE100880F43 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		8E41F334212D77DB00880F43 /* VideoMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMerger.swift; sourceTree = "<group>"; };
+		C1B96127EA815B6092235466 /* Pods-VMerge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMerge.release.xcconfig"; path = "Target Support Files/Pods-VMerge/Pods-VMerge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4586E4F5741ACEEEBC9A770 /* Pods_VMerge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				8E41F315212D697A00880F43 /* VMerge */,
 				8E41F314212D697A00880F43 /* Products */,
+				B26BF7FA6405423912CED267 /* Pods */,
+				A51D74061459631ED8B1AFF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,24 @@
 			path = Functionality;
 			sourceTree = "<group>";
 		};
+		A51D74061459631ED8B1AFF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19D535FB55D9CA67217F8C33 /* Pods_VMerge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B26BF7FA6405423912CED267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50616246C43A4D9B7BBA25D7 /* Pods-VMerge.debug.xcconfig */,
+				C1B96127EA815B6092235466 /* Pods-VMerge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E41F325212D697B00880F43 /* Build configuration list for PBXNativeTarget "VMerge" */;
 			buildPhases = (
+				87432CA9F107FD78DEFD5032 /* [CP] Check Pods Manifest.lock */,
 				8E41F30F212D697A00880F43 /* Sources */,
 				8E41F310212D697A00880F43 /* Frameworks */,
 				8E41F311212D697A00880F43 /* Resources */,
+				E0BF2AEEF26F3420E0BBEF42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		87432CA9F107FD78DEFD5032 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VMerge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0BF2AEEF26F3420E0BBEF42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VMerge/Pods-VMerge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VMerge/Pods-VMerge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VMerge/Pods-VMerge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E41F30F212D697A00880F43 /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		8E41F326212D697B00880F43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50616246C43A4D9B7BBA25D7 /* Pods-VMerge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -338,6 +408,7 @@
 		};
 		8E41F327212D697B00880F43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1B96127EA815B6092235466 /* Pods-VMerge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

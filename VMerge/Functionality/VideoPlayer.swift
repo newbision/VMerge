@@ -3,7 +3,7 @@
 //  VMerge
 //
 //  Created by newbision on 8/22/18.
-//  Copyright © 2018 AK. All rights reserved.
+//  Copyright © 2018 newbision. All rights reserved.
 //
 
 import Foundation

@@ -3,17 +3,15 @@
 //  VMerge
 //
 //  Created by newbision on 8/22/18.
-//  Copyright © 2018 AK. All rights reserved.
+//  Copyright © 2018 newbision. All rights reserved.
 //
 
 import UIKit
 import AVKit
 import Photos
+import NVActivityIndicatorView
 
-final class MergeVideoViewController: UIViewController {
-    
-    // MARK: - Properties
-    // MARK: DataSource
+final class MergeVideoViewController: UIViewController, NVActivityIndicatorViewable {
     
     private lazy var topVideoPlayer: VideoPlayer = {
         let url = Bundle.main.url(forResource: "video1", withExtension: "mp4")
@@ -73,7 +71,13 @@ final class MergeVideoViewController: UIViewController {
     // MARK: - Appearance
     
     private func merge() {
+        
+        let size = CGSize(width: 30, height: 30)
+        startAnimating(size, message: "", messageFont: nil, type: NVActivityIndicatorType.ballPulse, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil, fadeInAnimation: nil)
         videoMerger.merge { [weak self] session in
+            
+            self?.stopAnimating()
+            
             guard let `self` = self else {
                 return
             }

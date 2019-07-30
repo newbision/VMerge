@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR5-DX-XJA">
-                                <rect key="frame" x="0.0" y="20" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="533.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-XA-Dsg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-z2-Ogv">
-                                        <rect key="frame" x="0.0" y="233.5" width="375" height="233.5"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="266.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -44,11 +43,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-Aa-eEc">
-                                <rect key="frame" x="0.0" y="487" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="573.5" width="375" height="93.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brz-CG-BR9">
-                                        <rect key="frame" x="161" y="75" width="56" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brz-CG-BR9">
+                                        <rect key="frame" x="75" y="29.5" width="225" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Brz-CG-BR9" secondAttribute="height" multiplier="45:7" id="wq1-JW-2uq"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Merge"/>
                                         <connections>
@@ -57,6 +58,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Brz-CG-BR9" firstAttribute="centerY" secondItem="YbV-Aa-eEc" secondAttribute="centerY" id="0q2-kV-tn5"/>
+                                    <constraint firstItem="Brz-CG-BR9" firstAttribute="centerX" secondItem="YbV-Aa-eEc" secondAttribute="centerX" id="F7e-Bs-Wja"/>
+                                    <constraint firstItem="Brz-CG-BR9" firstAttribute="width" secondItem="YbV-Aa-eEc" secondAttribute="width" multiplier="0.6" id="Hcc-44-4AA"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,9 +70,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YbV-Aa-eEc" secondAttribute="bottom" id="34k-mP-M2H"/>
                             <constraint firstItem="sR5-DX-XJA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K5p-ZD-3Yu"/>
                             <constraint firstItem="YbV-Aa-eEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkV-s6-uS6"/>
-                            <constraint firstItem="sR5-DX-XJA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U8L-Io-bek"/>
+                            <constraint firstItem="sR5-DX-XJA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U8L-Io-bek"/>
                             <constraint firstItem="YbV-Aa-eEc" firstAttribute="top" secondItem="sR5-DX-XJA" secondAttribute="bottom" id="afM-dy-oq0"/>
-                            <constraint firstItem="sR5-DX-XJA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="cNb-DM-acA"/>
+                            <constraint firstItem="sR5-DX-XJA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="cNb-DM-acA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YbV-Aa-eEc" secondAttribute="trailing" id="eQF-rq-M6F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sR5-DX-XJA" secondAttribute="trailing" id="hwY-Sf-LGM"/>
                         </constraints>
