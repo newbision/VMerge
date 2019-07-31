@@ -73,7 +73,7 @@ final class MergeVideoViewController: UIViewController, NVActivityIndicatorViewa
     private func merge() {
         
         let size = CGSize(width: 30, height: 30)
-        startAnimating(size, message: "", messageFont: nil, type: NVActivityIndicatorType.ballPulse, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil, fadeInAnimation: nil)
+        startAnimating(size, message: "", messageFont: nil, type: NVActivityIndicatorType.ballSpinFadeLoader, color: nil, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor: nil, fadeInAnimation: nil)
         videoMerger.merge { [weak self] session in
             
             self?.stopAnimating()
